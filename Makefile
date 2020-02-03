@@ -23,14 +23,21 @@ env-%:
 	fi
 
 clean:
-	@echo
-	@echo Cleaning up
-	@rm -rf apollo/dist apollo/node_modules apollo/src/generated apollo/schema/generated prisma/node_modules
+	@printf "$(OK_COLOR)"																																												&& \
+	 printf "\n%s\n" "======================================================================================"		&& \
+	 printf "%s\n"   "= Cleaning up"																																						&& \
+	 printf "%s\n"   "======================================================================================"		&& \
+	 printf "$(NO_COLOR)"
+	 rm -rf apollo/dist apollo/node_modules apollo/src/generated apollo/schema/generated prisma/node_modules
 
 init: clean
-	@echo
-	@echo Initializing
-	@cd apollo && yarn install
+	@printf "$(OK_COLOR)"																																												&& \
+	 printf "\n%s\n" "======================================================================================"		&& \
+	 printf "%s\n"   "= Initializing Prismatopia"																																&& \
+	 printf "%s\n"   "======================================================================================"		&& \
+	 printf "$(NO_COLOR)"
+	 cd apollo && yarn install
+	 cd apollo && yarn install
 
 docker-clean: clean
 	@printf "$(OK_COLOR)"																																												&& \
@@ -45,7 +52,7 @@ docker-clean: clean
 local-up: clean apollo-build
 	@printf "$(OK_COLOR)"																																												&& \
 	 printf "\n%s\n" "======================================================================================"		&& \
-	 printf "%s\n"   "= Deep cleaning your Docker environment"																									&& \
+	 printf "%s\n"   "= Bringing up Prismatopia"																																&& \
 	 printf "%s\n"   "======================================================================================"		&& \
 	 printf "$(NO_COLOR)"
 	 docker-compose up --build
