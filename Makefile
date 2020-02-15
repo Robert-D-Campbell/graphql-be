@@ -71,7 +71,7 @@ local-prisma-deploy:
 	@export $$(cat .env | xargs)			&& \
 	 echo															&& \
 	 echo Deploying Prisma schema			&& \
-	 cd prisma && yarn install && prisma deploy
+	 cd prisma && yarn install && prisma reset && prisma deploy -f
 
 local-prisma-reseed:
 	@export $$(cat .env | xargs)			&& \

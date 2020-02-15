@@ -1,10 +1,17 @@
 type User {
   id: ID! @id
-  profile: Profile
+  profile: Profile @relation(name: "Profile")
 }
 
 type Profile {
   id: ID! @id
-  favorite_color: String
-  favorite_shape: String
+  email: String
+  username: String
+  firstName: String
+  lastName: String
+  bio: String
+  city: String
+  state: String
+  phoneNumber: String
+  user: User! @relation(link: INLINE, name: "Profile")
 }
