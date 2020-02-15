@@ -5,4 +5,7 @@
 
 # import Mutation.createUser from "generated/prisma.graphql"
 
+# import Mutation.createProfile from "generated/prisma.graphql"
 
+# import Mutation.updateProfile from "generated/prisma.graphql"
+# import Mutation.deleteProfile from "generated/prisma.graphql"

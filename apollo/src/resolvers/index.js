@@ -5,14 +5,16 @@
 // your resolvers but not seeing anything print to stdout, this is
 // the most likely culprit
 
-const Query = require('./Query');
-const Mutation = require('./Mutation');
-const User = require('./User');
+const Query = require("./Query");
+const Mutation = require("./Mutation");
+const User = require("./User");
+const Profile = require("./Profile");
 
 const resolvers = {
   Query,
   Mutation,
   User,
+  Profile
 };
 
 module.exports = resolvers;

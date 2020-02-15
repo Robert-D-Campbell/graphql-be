@@ -1,6 +1,6 @@
 type User {
   id: ID! @id
-  profile: Profile
+  profile: Profile @relation(name: "Profile")
 }
 
 type Profile {
@@ -13,4 +13,5 @@ type Profile {
   city: String
   state: String
   phoneNumber: String
+  user: User! @relation(link: INLINE, name: "Profile")
 }

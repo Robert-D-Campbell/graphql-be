@@ -34,7 +34,7 @@ const users = async (_, args, context) => {
 };
 
 /**
- * @param {{ where: import('../generated/prisma-client').EventWhereInput }} args
+ * @param {{ where: import('../generated/prisma-client').ProfileWhereInput }} args
  * @param {{ prisma: import('../generated/prisma-client').Prisma }} context
  * @returns { Promise }
  */
